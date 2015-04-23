@@ -22,4 +22,17 @@
     * Ability to safely get rid of some growing size of logs
     * Ease of use in comparing large datasets
   2. Justification
-    The cost of logging is difficult to quantify. The reward of central logging generally comes 
+    The cost of logging is difficult to quantify. The reward of central logging generally comes at the most painful times. The ability to be able to allow more than just SSDR and USS staff in determining how systems are used is justification enough.
+
+3. Strategy
+
+  The goal here is to look into what tools are available on the market today that match the staffing at USS and SSDR. 
+
+4. Scope
+
+USS will set up an Elasticsearch, Logstash, Kibana (ELK) instance. The setup will include a Redis Server that will be a buffer between the logstash-forwarders and the logstash processor. USS will install a logstash-forwarder on a select number of servers after consulting with SSDR on what needs to be shipped.
+
+  1. SSDR will accept responsibility of writing custom logstash filters in cases where their logs do not already have one. USS and SSDR will work on a way to limit who will have access to the Kibana interface. 
+  2. The success of collecting all logs from one server will create a sub-project to select another server and move the successfully collected server up to staging and production.
+  3. The project timeline would involve monthly cycles of selecting a server and ensuring the data can be collected from it. Selection of servers will be negotiated within the same timeline.
+
