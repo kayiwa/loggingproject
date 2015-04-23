@@ -36,3 +36,6 @@ USS will set up an Elasticsearch, Logstash, Kibana (ELK) instance. The setup wil
   2. The success of collecting all logs from one server will create a sub-project to select another server and move the successfully collected server up to staging and production.
   3. The project timeline would involve monthly cycles of selecting a server and ensuring the data can be collected from it. Selection of servers will be negotiated within the same timeline.
 
+Other Resources.
+
+Worth mentioning in this document. All of these services are offered by the companies like [Librato](https://librato.com) who offer a monthly free trial. UMD would to install a statsd or collectd agent to ship to the data to the librato server. The cost of these services is beyond the scope of this project but will need to be factored in as a cost-benefit analysis
